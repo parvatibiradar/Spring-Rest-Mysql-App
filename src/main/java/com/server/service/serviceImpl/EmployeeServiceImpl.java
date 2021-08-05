@@ -57,7 +57,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		try {
 			optional = dao.findById(id);
 		} catch (DataAccessException e) {
-			throw new DatabaseException("Some issue with database!! "+e.getMessage());
+			throw new DatabaseException("Some issue with database!!! "+e.getMessage());
 		}
 		Employee obj = optional.get();
 		obj.setSalary(salary);
